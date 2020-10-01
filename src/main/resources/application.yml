@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: eureka-discovery-service
+  profiles:
+    active: dev
+info:
+  version: ${project.version}
+endpoints:
+  shutdown:
+    enabled: true
+server:
+  port: 8761
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+---
+spring:
+  profiles: dev
+
+---
+spring:
+  profiles: docker
